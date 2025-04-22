@@ -1,0 +1,55 @@
+$date
+	Fri Apr 11 22:20:45 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module A1_3_tb $end
+$var wire 1 ! parity $end
+$var reg 8 " data [7:0] $end
+$scope module uut $end
+$var wire 8 # data [7:0] $end
+$var wire 1 ! parity $end
+$upscope $end
+$upscope $end
+$scope module A1_3_tb $end
+$scope module uut $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 #
+b0 "
+0!
+$end
+#10
+1!
+b1 "
+b1 #
+#20
+0!
+b11 "
+b11 #
+#30
+1!
+b111 "
+b111 #
+#40
+0!
+b11111111 "
+b11111111 #
+#50
+b10101010 "
+b10101010 #
+#60
+1!
+b11111110 "
+b11111110 #
+#70

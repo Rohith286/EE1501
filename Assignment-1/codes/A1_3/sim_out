@@ -1,0 +1,57 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x1497072e0 .scope module, "A1_3_tb" "A1_3_tb" 2 1;
+ .timescale 0 0;
+v0x1497176f0_0 .var "data", 7 0;
+v0x1497177b0_0 .net "parity", 0 0, L_0x149717860;  1 drivers
+S_0x149707450 .scope module, "uut" "A1_3" 2 10, 3 1 0, S_0x1497072e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "data";
+    .port_info 1 /OUTPUT 1 "parity";
+v0x149707610_0 .net "data", 7 0, v0x1497176f0_0;  1 drivers
+v0x149717640_0 .net "parity", 0 0, L_0x149717860;  alias, 1 drivers
+L_0x149717860 .reduce/xor v0x1497176f0_0;
+    .scope S_0x1497072e0;
+T_0 ;
+    %vpi_call 2 17 "$dumpfile", "A1_3/A1_3.vcd" {0 0 0};
+    %vpi_call 2 18 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x1497072e0 {0 0 0};
+    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x149707450 {0 0 0};
+    %vpi_call 2 22 "$display", "Time\011Data\011\011Parity" {0 0 0};
+    %vpi_call 2 23 "$monitor", "%0t\011%b\011%b", $time, v0x1497176f0_0, v0x1497177b0_0 {0 0 0};
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x1497176f0_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v0x1497176f0_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 3, 0, 8;
+    %store/vec4 v0x1497176f0_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 7, 0, 8;
+    %store/vec4 v0x1497176f0_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 255, 0, 8;
+    %store/vec4 v0x1497176f0_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 170, 0, 8;
+    %store/vec4 v0x1497176f0_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 254, 0, 8;
+    %store/vec4 v0x1497176f0_0, 0, 8;
+    %delay 10, 0;
+    %vpi_call 2 35 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "/Users/rohith/Documents/Coding/Verilog/A1_3/A1_3_tb.v";
+    "/Users/rohith/Documents/Coding/Verilog/A1_3/A1_3.v";
